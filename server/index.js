@@ -1,5 +1,3 @@
-'use strict';
-
 const Glue = require('@hapi/glue');
 const Manifest = require('./manifest');
 const cron = require("node-cron");
@@ -28,6 +26,7 @@ exports.deployment = async (start) => {
 
     await server.start();
     
+
 
     console.log(`Server started at ${server.info.uri}`);
 
