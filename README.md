@@ -4,7 +4,7 @@
 
 0. Ensure you are using Node version v10.16.0
 1. `npm install` to install the dependencies
-2. Set up the DB in MySQL. Read the `How to use Knex Migrations?` section.
+2. Set up the DB in POSTGRESQL. Read the `How to use Knex Migrations?` section.
 3. Create a .env file in the root directory of the project and update the required variables. You can use `sample.env` as the skeleton.
 4. `npm start` to run the server. The server will run with auto reloading using nodemon.
 
@@ -12,7 +12,7 @@
 
 ### Linting
 
-Code should be properly linted before any pull request is merged into the `master`. `npm run lint` to see all the linting errors. In cases where exceptions need to be made and a particular linting error cannot be fixed use the following code above the concerned line.
+Code should be properly linted before any pull request is merged into the master. npm run lint to see all the linting errors. In cases where exceptions need to be made and a particular linting error cannot be fixed use the following code above the concerned line.
 
 ```javascript
 // eslint-disable-next-line no-useless-escape
@@ -50,7 +50,7 @@ All the heavy business logic should exist strictly in the concerned services. No
 
 ## How to use Knex Migrations?
 
-The initial schema created while developing Chanakya is not created as a Knex migration but stored in a SQL file in `sqlScripts/initialSchema.sql`. When you are installing Chanakya for the first time you need to first import this schema into the MySQL DB.
+The initial schema created while developing Chanakya is not created as a Knex migration but stored in a SQL file in `sqlScripts/initialSchema.sql`. When you are installing Chanakya for the first time you need to first import this schema into the POTGTRESQL DB.
 
 After importing the schema you can run the migrations using `npm run knex migrate:latest`.
 
